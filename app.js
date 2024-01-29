@@ -227,7 +227,7 @@ app.post('/todos/', async (request, response) => {
     const date = format(new Date(dueDate), 'yyyy-MM-dd')
 
     const createNewTodo = `
-    INSERT INTO todo (id, todo, category, priority, status, due_date) VALUES (${id}, "${todo}", "${priority}", "${status}", "${category}", "${date}");`
+    INSERT INTO todo (id, todo, category, priority, status, due_date) VALUES (${id}, "${todo}","${category}", "${priority}", "${status}", "${date}");`
 
     await db.run(createNewTodo)
 
